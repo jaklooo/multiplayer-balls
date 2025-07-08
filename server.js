@@ -16,7 +16,7 @@ io.on('connection', socket => {
     color: Object.keys(players).length === 0 ? 'red' : 'blue'
   };
 
-  socket.emit('init', players[socket.id]);
+  socket.emit('init', { id: socket.id, players: players });
   socket.broadcast.emit('new-player', { id: socket.id, data: players[socket.id] });
 
   socket.on('move', data => {

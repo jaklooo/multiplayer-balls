@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Multiplayer Balls</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="game" width="800" height="600"></canvas>
+  <div class="game-container">
+    <canvas id="game" width="800" height="600"></canvas>
+    <div class="instructions">
+      <p>Desktop: Use WASD keys to move</p>
+      <p>Mobile: Touch screen to move towards your finger</p>
+    </div>
+  </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>
