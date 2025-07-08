@@ -42,8 +42,8 @@ function draw() {
 }
 
 socket.on('init', (data) => {
-  myPlayer = data;
-  players[socket.id] = data;
+  myPlayer = data.players[data.id];
+  players = data.players;
 });
 
 socket.on('new-player', ({ id, data }) => {
